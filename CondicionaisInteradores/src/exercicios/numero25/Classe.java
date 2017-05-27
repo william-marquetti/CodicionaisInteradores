@@ -10,13 +10,9 @@
 
 package exercicios.numero25;
 
-import java.util.Scanner;
-
 public class Classe {
 
 	public static void main(String[] args) {
-
-		Scanner scanner = new Scanner(System.in);
 
 		String a = "Rua Antônio da Veiga, número 201, Vila Nova, Blumenau - SC";
 		String b =  "SC - Blumenau, rua Joiville nº 2011.";
@@ -31,10 +27,11 @@ public class Classe {
 		
 		System.out.println(a.substring(posicaoPrimeiroSeparador, posicaoSegundoSeparador));
 		
-		posicaoPrimeiroSeparador = b.indexOf(" ");
-		posicaoSegundoSeparador = b.indexOf("n");
-		posicaoPrimeiroSeparador++;
-
+		posicaoPrimeiroSeparador = b.indexOf("J");
+		posicaoSegundoSeparador = b.lastIndexOf("e");
+		posicaoPrimeiroSeparador--;
+		posicaoSegundoSeparador++;
+		
 		System.out.println(b.substring(posicaoPrimeiroSeparador, posicaoSegundoSeparador));
 
 	}
