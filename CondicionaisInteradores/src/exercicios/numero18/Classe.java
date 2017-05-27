@@ -28,6 +28,7 @@ public class Classe {
 		int ano1;
 		int ano2;
 		
+		String maisNova = "";
 		String maisVelha = "";
 
 
@@ -59,27 +60,33 @@ public class Classe {
 		
 		if ( ano1 > ano2){
 			maisVelha = nome2;
+			maisNova = nome1;
 			
 		} else if ( ano2 > ano1){
 			maisVelha = nome1;
+			maisNova = nome2;
 			
 		} else if ( ano1 == ano2 ){
 			if ( mes1 == mes2 ){
 				
 				if (dia1 < dia2 ){
 					maisVelha = nome1;
+					maisNova = nome2;
 					
 				} else {
 					maisVelha = nome2;
+					maisNova = nome1;
 				}
 			} else if ( mes1 > mes2 ){
 				maisVelha = nome2;
+				maisNova = nome1;
 			}else if ( mes2 > mes1 ){
 				maisVelha = nome1;
+				maisNova = nome2;
 			}
 		}
 			
-		System.out.println(maisVelha + " é mais velho");
+		System.out.println(maisVelha + " é mais velha\r\n" + maisNova + " é mais nova.");
 		
 	}
 }
